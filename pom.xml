@@ -15,6 +15,7 @@
     <jsp.version>2.2.1</jsp.version>
     <el.version>2.2.1</el.version>
     <jstl.version>1.2</jstl.version>
+    <cxf.version>3.1.2</cxf.version>
   </properties>
 
 
@@ -35,13 +36,15 @@
 
 
   <modules>
-    <module>dependencies</module>
-    <module>w-service</module>
-    <module>hello-client</module>
-    <module>hello-service</module>
-    <module>weather-client</module>
+    <module>all-dependencies</module>
+    <module>cxf-client-hello</module>
+    <module>jdk-client-hello</module>
+    <module>ws-service</module>
+    <module>x-client-weather-jdk</module>
+    <module>jdk-client</module>
+    <module>cxf-client</module>
   </modules>
-  
+
 
   <build>
     <finalName>demo_webservice</finalName>
