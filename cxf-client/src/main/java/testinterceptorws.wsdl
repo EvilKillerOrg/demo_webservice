@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:tns="http://sei.interceptor.ws.ek.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TestInterceptorImplService"
+  targetNamespace="http://sei.interceptor.ws.ek.com/">
+  
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://sei.interceptor.ws.ek.com/"
+      elementFormDefault="unqualified" targetNamespace="http://sei.interceptor.ws.ek.com/"
+      version="1.0">
+      <xs:element name="getMyInfo" type="tns:getMyInfo" />
+      <xs:element name="getMyInfoResponse" type="tns:getMyInfoResponse" />
+      <xs:complexType name="getMyInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element name="arg1" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getMyInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="getMyInfo">
+    <wsdl:part element="tns:getMyInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMyInfoResponse">
+    <wsdl:part element="tns:getMyInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:portType name="ITestInterceptor">
+    <wsdl:operation name="getMyInfo">
+      <wsdl:input message="tns:getMyInfo" name="getMyInfo">
+      </wsdl:input>
+      <wsdl:output message="tns:getMyInfoResponse" name="getMyInfoResponse">
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  
+  <wsdl:binding name="TestInterceptorImplServiceSoapBinding" type="tns:ITestInterceptor">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMyInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getMyInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getMyInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  
+  <wsdl:service name="TestInterceptorImplService">
+    <wsdl:port binding="tns:TestInterceptorImplServiceSoapBinding" name="TestInterceptorImplPort">
+      <soap:address location="http://localhost:8088/demo_webservice/testInterceptor" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
