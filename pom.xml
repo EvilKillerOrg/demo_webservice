@@ -16,6 +16,7 @@
     <el.version>2.2.1</el.version>
     <jstl.version>1.2</jstl.version>
     <cxf.version>3.1.2</cxf.version>
+    <spring.version>4.1.6.RELEASE</spring.version>
   </properties>
 
 
@@ -36,13 +37,13 @@
 
 
   <modules>
-    <module>all-dependencies</module>
-    <module>cxf-client-hello</module>
-    <module>jdk-client-hello</module>
-    <module>ws-service</module>
-    <module>x-client-weather-jdk</module>
-    <module>jdk-client</module>
-    <module>cxf-client</module>
+    <module>all-dependencies</module> <!-- 集中管理依赖 -->
+    <module>ws-client-cxf</module> <!-- 客户端CXF实现 -->
+    <module>ws-client-jdk</module> <!-- 客户端JDK实现 -->
+    <module>ws-service</module> <!-- 服务端(JDK和CXF实现区别只是有没有CXF的包) -->
+    <module>ws-web-service</module> <!-- 服务端WEB模块 -->
+    <module>ws-web-client</module> <!-- 客户端WEB模块 -->
+    <module>x-client-weather-jdk</module> <!-- JDK实现的天气预报client端 -->
   </modules>
 
 

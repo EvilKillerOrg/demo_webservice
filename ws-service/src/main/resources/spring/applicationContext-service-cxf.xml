@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:jaxws="http://cxf.apache.org/jaxws"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+  <!-- Spring整合CXF: Spring引入CXF的核心配置 -->
+  <import resource="classpath:META-INF/cxf/cxf.xml" />
+
+  <!-- 
+   CXF结合Spring发布服务
+   容器启动的时候就会加载(发布),就和bean一样 
+   address="/testSpring" 就是发布的地址,这样访问:项目路径/testSpring?wsdl
+   -->
+  <jaxws:endpoint id="orderws" implementor="com.ek.ws.spring.sei.OrderImpl"
+    address="/testSpring" />
+
+
+</beans>
