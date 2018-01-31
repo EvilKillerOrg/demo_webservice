@@ -1,4 +1,4 @@
-package com.ek.ws.interceptor.receive;
+package com.ek.ws.interceptor.logging.receive;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.message.Message;
 import org.apache.log4j.Logger;
 
-import com.ek.ws.interceptor.sei.ITestInterceptor;
-import com.ek.ws.interceptor.sei.TestInterceptorImplService;
+import com.ek.ws.interceptor.logging.sei.ILoggingInterceptor;
+import com.ek.ws.interceptor.logging.sei.LoggingInterceptorImplService;
 
 /**
  * 客户器端,测试拦截器
@@ -27,8 +27,8 @@ public class ReceiveService {
 
   public static void main(String[] args) {
 
-    TestInterceptorImplService factory = new TestInterceptorImplService();
-    ITestInterceptor testInterceptorImplPort = factory.getTestInterceptorImplPort();
+    LoggingInterceptorImplService factory = new LoggingInterceptorImplService();
+    ILoggingInterceptor testInterceptorImplPort = factory.getLoggingInterceptorImplPort();
 
     // Client发送请求的客户端对象
     Client client = ClientProxy.getClient(testInterceptorImplPort);

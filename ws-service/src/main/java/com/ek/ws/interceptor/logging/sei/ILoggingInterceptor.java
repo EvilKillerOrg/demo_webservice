@@ -1,4 +1,4 @@
-package com.ek.ws.interceptor.sei;
+package com.ek.ws.interceptor.logging.sei;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -13,7 +13,7 @@ import javax.jws.WebService;
  */
 
 @WebService
-public interface ITestInterceptor {
+public interface ILoggingInterceptor {
   
   @WebMethod
   public String getMyInfo(String name, int age);

@@ -1,4 +1,4 @@
-package com.ek.ws.interceptor.sei;
+package com.ek.ws.interceptor.logging.sei;
 
 import javax.jws.WebService;
 
@@ -11,7 +11,7 @@ import javax.jws.WebService;
  * @date: 2018年1月30日 上午2:46:47
  */
 @WebService
-public class TestInterceptorImpl implements ITestInterceptor {
+public class LoggingInterceptorImpl implements ILoggingInterceptor {
 
   @Override
   public String getMyInfo(String name, int age) {

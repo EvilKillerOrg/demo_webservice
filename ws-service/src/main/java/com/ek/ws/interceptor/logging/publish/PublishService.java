@@ -1,4 +1,4 @@
-package com.ek.ws.interceptor.publish;
+package com.ek.ws.interceptor.logging.publish;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.apache.cxf.jaxws.EndpointImpl;
 import org.apache.cxf.message.Message;
 import org.apache.log4j.Logger;
 
-import com.ek.ws.interceptor.sei.TestInterceptorImpl;
+import com.ek.ws.interceptor.logging.sei.LoggingInterceptorImpl;
 
 /**
  * 服务器端,测试拦截器
@@ -26,8 +26,8 @@ public class PublishService {
 
   public static void main(String[] args) {
 
-    String address = "http://localhost:8088/demo_webservice/testInterceptor";
-    Endpoint endpoint = Endpoint.publish(address, new TestInterceptorImpl());
+    String address = "http://localhost:8088/demo_webservice/loggingInterceptor";
+    Endpoint endpoint = Endpoint.publish(address, new LoggingInterceptorImpl());
 
     // EndpointImpl接收请求的服务端对象(Endpoint中方法有限,强转为EndpointImpl,这里有拦截器的方法)
     // org.apache.cxf.jaxws22.EndpointImpl; 这个已经@Deprecated了,新的建议可以看源码

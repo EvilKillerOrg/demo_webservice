@@ -1,5 +1,5 @@
 
-package com.ek.ws.interceptor.sei;
+package com.ek.ws.interceptor.logging.sei;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

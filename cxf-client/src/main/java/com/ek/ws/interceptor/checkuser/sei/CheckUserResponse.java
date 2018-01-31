@@ -1,5 +1,5 @@
 
-package com.ek.ws.interceptor.sei;
+package com.ek.ws.interceptor.checkuser.sei;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>getMyInfoResponse complex type的 Java 类。
+ * <p>checkUserResponse complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="getMyInfoResponse"&gt;
+ * &lt;complexType name="checkUserResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getMyInfoResponse", propOrder = {
+@XmlType(name = "checkUserResponse", propOrder = {
     "_return"
 })
-public class GetMyInfoResponse {
+public class CheckUserResponse {
 
     @XmlElement(name = "return")
     protected String _return;

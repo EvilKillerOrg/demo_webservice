@@ -1,5 +1,5 @@
 
-package com.ek.ws.interceptor.sei;
+package com.ek.ws.interceptor.logging.sei;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.ek.ws.interceptor.sei package. 
+ * generated in the com.ek.ws.interceptor.logging.sei package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -24,11 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetMyInfo_QNAME = new QName("http://sei.interceptor.ws.ek.com/", "getMyInfo");
-    private final static QName _GetMyInfoResponse_QNAME = new QName("http://sei.interceptor.ws.ek.com/", "getMyInfoResponse");
+    private final static QName _GetMyInfo_QNAME = new QName("http://sei.logging.interceptor.ws.ek.com/", "getMyInfo");
+    private final static QName _GetMyInfoResponse_QNAME = new QName("http://sei.logging.interceptor.ws.ek.com/", "getMyInfoResponse");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.ek.ws.interceptor.sei
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.ek.ws.interceptor.logging.sei
      * 
      */
     public ObjectFactory() {
@@ -54,7 +54,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetMyInfo }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://sei.interceptor.ws.ek.com/", name = "getMyInfo")
+    @XmlElementDecl(namespace = "http://sei.logging.interceptor.ws.ek.com/", name = "getMyInfo")
     public JAXBElement<GetMyInfo> createGetMyInfo(GetMyInfo value) {
         return new JAXBElement<GetMyInfo>(_GetMyInfo_QNAME, GetMyInfo.class, null, value);
     }
@@ -63,7 +63,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetMyInfoResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://sei.interceptor.ws.ek.com/", name = "getMyInfoResponse")
+    @XmlElementDecl(namespace = "http://sei.logging.interceptor.ws.ek.com/", name = "getMyInfoResponse")
     public JAXBElement<GetMyInfoResponse> createGetMyInfoResponse(GetMyInfoResponse value) {
         return new JAXBElement<GetMyInfoResponse>(_GetMyInfoResponse_QNAME, GetMyInfoResponse.class, null, value);
     }
