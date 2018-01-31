@@ -42,7 +42,6 @@
     <module>ws-client-jdk</module> <!-- 客户端JDK实现 -->
     <module>ws-service</module> <!-- 服务端(JDK和CXF实现区别只是有没有CXF的包) -->
     <module>ws-web-service</module> <!-- 服务端WEB模块 -->
-    <module>ws-web-client</module> <!-- 客户端WEB模块 -->
     <module>x-client-weather-jdk</module> <!-- JDK实现的天气预报client端 -->
   </modules>
 

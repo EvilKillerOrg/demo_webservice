@@ -4,14 +4,9 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
 		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+    
+    <!-- 客户端 配置 serviceClass的值是要动态实现的接口 -->
+  <jaxws:client id="orderws" serviceClass="com.ek.ws.spring.sei.IOrder"
+    address="http://localhost:8088/demo_webservice/springws" />
 
-  <!-- Spring整合CXF: Spring引入CXF的核心配置 -->
-  <import resource="classpath:META-INF/cxf/cxf.xml" />
-
-  <!-- 
-   CXF结合Spring发布服务
-   容器启动的时候就会加载(发布),就和bean一样 
-   address="/springws" 就是发布的地址,这样访问:项目路径/springws?wsdl
-   -->
-  <jaxws:endpoint id="orderws" implementor="com.ek.ws.spring.sei.OrderImpl" address="/springws" />
 </beans>
