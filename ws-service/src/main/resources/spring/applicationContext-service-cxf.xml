@@ -13,5 +13,11 @@
    容器启动的时候就会加载(发布),就和bean一样 
    address="/springws" 就是发布的地址,这样访问:项目路径/springws?wsdl
    -->
-  <jaxws:endpoint id="orderws" implementor="com.ek.ws.spring.sei.OrderImpl" address="/springws" />
+  <jaxws:endpoint id="orderws" implementor="com.ek.ws.spring.sei.OrderImpl" address="/springws">
+    
+    <!-- 服务端配置拦截器 -->
+    <jaxws:inInterceptors>
+      <bean class="com.ek.ws.interceptor.checkuser.CheckUserInterceptor"></bean>
+    </jaxws:inInterceptors>
+  </jaxws:endpoint>
 </beans>
